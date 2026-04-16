@@ -46,3 +46,43 @@ p  { line-height: 1.6; }
 .btn-secondary:hover { background: var(--surface2); }
 .btn-danger { background: #7f1d1d; color: var(--red); border: 1px solid var(--red); }
 .btn-danger:hover { background: #991b1b; }
+
+/* === Homepage === */
+.home-header {
+  text-align: center;
+  margin-bottom: 32px;
+}
+.home-header h1 { margin-bottom: 6px; }
+.home-header p { font-size: 0.95rem; }
+
+.chapter-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.chapter-card {
+  background: var(--surface);
+  border: 1px solid var(--surface2);
+  border-radius: var(--radius);
+  padding: 20px;
+  text-align: center;
+  cursor: pointer;
+  transition: border-color 0.15s, background 0.15s;
+}
+.chapter-card:hover {
+  border-color: var(--accent);
+  background: #1e2f4a;
+}
+.chapter-card .emoji { font-size: 2rem; margin-bottom: 8px; }
+.chapter-card h3 { font-size: 0.9rem; color: var(--accent); margin-bottom: 4px; }
+.chapter-card p  { font-size: 0.75rem; }
+
+.full-test-btn {
+  width: 100%;
+  padding: 14px;
+  font-size: 1rem;
+  border-radius: var(--radius);
+  margin-top: 4px;
+}
