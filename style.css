@@ -28,7 +28,7 @@ body {
 
 h1 { font-size: 1.8rem; font-weight: 800; }
 h2 { font-size: 1.3rem; font-weight: 700; }
-p  { line-height: 1.6; color: var(--text-muted); }
+p  { line-height: 1.6; }
 
 .btn {
   display: inline-block;
@@ -45,3 +45,4 @@ p  { line-height: 1.6; color: var(--text-muted); }
 .btn-secondary { background: var(--surface); color: var(--text); border: 1px solid var(--surface2); }
 .btn-secondary:hover { background: var(--surface2); }
 .btn-danger { background: #7f1d1d; color: var(--red); border: 1px solid var(--red); }
+.btn-danger:hover { background: #991b1b; }
