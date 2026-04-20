@@ -1,0 +1,506 @@
+[
+  {
+    "id": "me_ch1_q1",
+    "chapter": 1,
+    "type": "mcq",
+    "question": "A single-loop series circuit contains: a 12V source, a 15V source, and four resistors 3Ω, 5Ω, 2Ω, 5Ω all in series. Applying KVL clockwise gives: −12 + 3i + 5i + 2i + 15 + 5i = 0. What is the current i?",
+    "options": ["A. +0.2 A", "B. −0.2 A", "C. +0.5 A", "D. −0.5 A"],
+    "answer": "B",
+    "explanation": "KVL: 15i = 12 − 15 = −3, so i = −0.2 A. The negative sign means the actual current flows opposite to the assumed clockwise direction (from the 15V source toward the 12V source)."
+  },
+  {
+    "id": "me_ch1_q2",
+    "chapter": 1,
+    "type": "mcq",
+    "question": "Kirchhoff's Current Law (KCL) states that:",
+    "options": [
+      "A. The sum of all voltages around any closed loop equals zero.",
+      "B. The sum of currents entering a node equals the sum of currents leaving.",
+      "C. Voltage is proportional to resistance.",
+      "D. Power consumed equals power generated in any circuit."
+    ],
+    "answer": "B",
+    "explanation": "KCL is based on conservation of charge — currents in = currents out at any node. KVL (not KCL) deals with voltages summing to zero around a loop."
+  },
+  {
+    "id": "me_ch1_q3",
+    "chapter": 1,
+    "type": "mcq",
+    "question": "A series circuit has a 10V source, a 2Ω resistor, and a 3Ω resistor. What is the current?",
+    "options": ["A. 1.0 A", "B. 1.5 A", "C. 2.0 A", "D. 3.3 A"],
+    "answer": "C",
+    "explanation": "Total resistance = 2 + 3 = 5Ω. By Ohm's law: i = V/R = 10/5 = 2 A."
+  },
+  {
+    "id": "me_ch1_q4",
+    "chapter": 1,
+    "type": "mcq",
+    "question": "In a series circuit with a 20V source and resistors 4Ω and 6Ω, what is the voltage drop across the 6Ω resistor?",
+    "options": ["A. 6 V", "B. 8 V", "C. 12 V", "D. 14 V"],
+    "answer": "C",
+    "explanation": "Current i = 20/(4+6) = 2 A. Voltage across 6Ω = 2 × 6 = 12 V. Alternatively by voltage divider: V = 20 × 6/(4+6) = 12 V."
+  },
+  {
+    "id": "me_ch1_q5",
+    "chapter": 1,
+    "type": "short",
+    "question": "State Kirchhoff's Voltage Law (KVL). Apply it to find the current in a series circuit with a 9V battery and three resistors: 1Ω, 2Ω, and 3Ω.",
+    "answer": "KVL: the algebraic sum of all voltages around any closed loop equals zero. Applying clockwise: −9 + 1i + 2i + 3i = 0 → 6i = 9 → i = 1.5 A.",
+    "explanation": "KVL is based on conservation of energy. The EMF (9V) equals the total resistive drops. Total R = 6Ω, so i = 9/6 = 1.5 A."
+  },
+
+  {
+    "id": "me_ch2_q1",
+    "chapter": 2,
+    "type": "mcq",
+    "question": "Two resistors 5Ω and 20Ω are connected in parallel. What is their equivalent resistance?",
+    "options": ["A. 25 Ω", "B. 10 Ω", "C. 4 Ω", "D. 2.5 Ω"],
+    "answer": "C",
+    "explanation": "For parallel resistors: 1/Req = 1/5 + 1/20 = 4/20 + 1/20 = 5/20. So Req = 4 Ω."
+  },
+  {
+    "id": "me_ch2_q2",
+    "chapter": 2,
+    "type": "mcq",
+    "question": "A 10V source connects to R1 = 20Ω in series with a parallel combination of R2 = 20Ω and R3 = 20Ω. Using the voltage divider principle, what is the voltage v across R2‖R3?",
+    "options": ["A. 5.0 V", "B. 3.3 V", "C. 6.7 V", "D. 10 V"],
+    "answer": "B",
+    "explanation": "R2‖R3 = (20×20)/(20+20) = 10Ω. Voltage divider: v = 10 × 10/(20+10) = 100/30 ≈ 3.33 V."
+  },
+  {
+    "id": "me_ch2_q3",
+    "chapter": 2,
+    "type": "mcq",
+    "question": "A voltage divider has a 12V source with R1 = 40Ω and R2 = 20Ω in series. What is the voltage across R2?",
+    "options": ["A. 2 V", "B. 4 V", "C. 6 V", "D. 8 V"],
+    "answer": "B",
+    "explanation": "V_R2 = Vs × R2/(R1+R2) = 12 × 20/(40+20) = 12 × 20/60 = 4 V."
+  },
+  {
+    "id": "me_ch2_q4",
+    "chapter": 2,
+    "type": "mcq",
+    "question": "Three resistors 3Ω, 6Ω, and 2Ω are connected: 3Ω and 6Ω are in parallel, and that combination is in series with 2Ω. What is the total equivalent resistance?",
+    "options": ["A. 11 Ω", "B. 4 Ω", "C. 6 Ω", "D. 8 Ω"],
+    "answer": "B",
+    "explanation": "3Ω ‖ 6Ω = (3×6)/(3+6) = 18/9 = 2Ω. Total = 2 + 2 = 4Ω."
+  },
+  {
+    "id": "me_ch2_q5",
+    "chapter": 2,
+    "type": "short",
+    "question": "Explain the voltage divider principle. Calculate the voltage across R2 in a circuit with a 15V source, R1 = 10Ω and R2 = 5Ω in series.",
+    "answer": "Voltage divider: in a series circuit, voltage splits in proportion to resistance. V_R2 = Vs × R2/(R1+R2) = 15 × 5/(10+5) = 15 × 5/15 = 5 V.",
+    "explanation": "The voltage divider formula V_Rx = Vs × Rx/R_total works because the same current flows through all series resistors, and V = iR for each."
+  },
+
+  {
+    "id": "me_ch3_q1",
+    "chapter": 3,
+    "type": "mcq",
+    "question": "A circuit has a 12V source with two 100Ω resistors forming a voltage divider. Terminals A (top of lower resistor) and B (bottom of lower resistor) are open. What is the Thevenin voltage V_th (open-circuit voltage)?",
+    "options": ["A. 12 V", "B. 8 V", "C. 6 V", "D. 3 V"],
+    "answer": "C",
+    "explanation": "With no current through the external circuit (open terminals), the voltage divides equally: V_th = 12 × 100/(100+100) = 6 V."
+  },
+  {
+    "id": "me_ch3_q2",
+    "chapter": 3,
+    "type": "mcq",
+    "question": "In the same 12V, two-100Ω resistor circuit, terminals A and B are shorted. What is the short-circuit current i_sc?",
+    "options": ["A. 0.06 A", "B. 0.12 A", "C. 0.24 A", "D. 0.06 A"],
+    "answer": "B",
+    "explanation": "When A-B is shorted, the lower 100Ω is bypassed. All current flows through the upper 100Ω only: i_sc = 12/100 = 0.12 A."
+  },
+  {
+    "id": "me_ch3_q3",
+    "chapter": 3,
+    "type": "mcq",
+    "question": "For the same circuit (12V source, two 100Ω resistors), what is the Thevenin resistance R_th seen from terminals A-B?",
+    "options": ["A. 200 Ω", "B. 100 Ω", "C. 50 Ω", "D. 25 Ω"],
+    "answer": "C",
+    "explanation": "R_th = R_th seen with voltage source replaced by short circuit = 100Ω ‖ 100Ω = (100×100)/(100+100) = 50Ω."
+  },
+  {
+    "id": "me_ch3_q4",
+    "chapter": 3,
+    "type": "mcq",
+    "question": "Using the Thevenin equivalent (V_th = 6V, R_th = 50Ω), what is the current through a 10Ω load resistor connected between A and B?",
+    "options": ["A. 0.60 A", "B. 0.12 A", "C. 0.10 A", "D. 0.06 A"],
+    "answer": "C",
+    "explanation": "i = V_th / (R_th + R_L) = 6 / (50 + 10) = 6/60 = 0.1 A."
+  },
+  {
+    "id": "me_ch3_q5",
+    "chapter": 3,
+    "type": "short",
+    "question": "Explain Thevenin's theorem in your own words. State the two values you need to find a Thevenin equivalent circuit.",
+    "answer": "Thevenin's theorem states that any linear circuit with sources and resistors, viewed from two terminals, can be replaced by a single voltage source V_th in series with a single resistor R_th. V_th = open-circuit voltage at the terminals. R_th = resistance seen at the terminals with all independent sources deactivated (voltage sources replaced by short circuits, current sources by open circuits).",
+    "explanation": "The Thevenin equivalent simplifies complex circuits into one source + one resistor, making it easy to analyze what happens when different loads are connected."
+  },
+
+  {
+    "id": "me_ch4_q1",
+    "chapter": 4,
+    "type": "mcq",
+    "question": "What is meant by the term 'precision' in sensor measurements?",
+    "options": [
+      "A. The extent to which a measurement approaches its true value.",
+      "B. The lack of bias in the measurement.",
+      "C. The extent to which a measurement approaches its average value.",
+      "D. Guarantee of no outliers in the measurement."
+    ],
+    "answer": "C",
+    "explanation": "Precision describes repeatability — how close repeated measurements are to each other (their average). Accuracy (not precision) describes closeness to the true value. Precision can be high even when the average is biased away from the true value."
+  },
+  {
+    "id": "me_ch4_q2",
+    "chapter": 4,
+    "type": "mcq",
+    "question": "A sensor consistently reads 5% higher than the true value, no matter how many times it is tested. This sensor is best described as:",
+    "options": [
+      "A. Accurate but not precise.",
+      "B. Precise but not accurate.",
+      "C. Both accurate and precise.",
+      "D. Neither accurate nor precise."
+    ],
+    "answer": "B",
+    "explanation": "The sensor gives consistent (repeatable) readings — so it is precise. However, all readings are 5% too high (systematic bias away from true value), so it is not accurate."
+  },
+  {
+    "id": "me_ch4_q3",
+    "chapter": 4,
+    "type": "mcq",
+    "question": "A temperature sensor is tested 5 times at 100°C. Readings: 97°C, 103°C, 95°C, 102°C, 98°C. Which statement best describes the sensor?",
+    "options": [
+      "A. High accuracy, high precision.",
+      "B. High accuracy, low precision.",
+      "C. Low accuracy, high precision.",
+      "D. Low accuracy, low precision."
+    ],
+    "answer": "B",
+    "explanation": "The average reading ≈ 99°C ≈ 100°C (close to true value → high accuracy). But readings spread from 95°C to 103°C (large variation → low precision/repeatability)."
+  },
+  {
+    "id": "me_ch4_q4",
+    "chapter": 4,
+    "type": "mcq",
+    "question": "Which of the following would reduce random error in sensor measurements?",
+    "options": [
+      "A. Recalibrating the sensor against a known standard.",
+      "B. Taking multiple readings and averaging them.",
+      "C. Replacing the sensor with one from a different manufacturer.",
+      "D. Increasing the sensor's measurement range."
+    ],
+    "answer": "B",
+    "explanation": "Random errors are statistical fluctuations that cancel out over many measurements. Averaging multiple readings reduces the effect of random error. Recalibration addresses systematic error (accuracy), not random error."
+  },
+  {
+    "id": "me_ch4_q5",
+    "chapter": 4,
+    "type": "short",
+    "question": "Distinguish between accuracy and precision in sensor measurements. Give one example of a sensor that is precise but not accurate.",
+    "answer": "Accuracy: how close a reading is to the true (actual) value. Precision: how consistent/repeatable readings are with each other. Example: a bathroom scale that always reads 2 kg too heavy — every reading is consistent (precise) but all are wrong (not accurate).",
+    "explanation": "A sensor can be precise (low spread) but inaccurate (systematic offset from truth). Calibration fixes accuracy; better sensing technology improves precision."
+  },
+
+  {
+    "id": "me_ch5_q1",
+    "chapter": 5,
+    "type": "mcq",
+    "question": "An inductor has been connected to a DC source for a very long time. In steady state, the inductor behaves like:",
+    "options": [
+      "A. An open circuit (infinite resistance).",
+      "B. A short circuit (zero resistance).",
+      "C. A resistor equal to its inductance value.",
+      "D. A capacitor."
+    ],
+    "answer": "B",
+    "explanation": "In DC steady state, dI/dt = 0, so the voltage across an inductor V = L(dI/dt) = 0. This means zero voltage drop — equivalent to a short circuit (wire). A capacitor is the opposite: it acts as an open circuit in DC steady state."
+  },
+  {
+    "id": "me_ch5_q2",
+    "chapter": 5,
+    "type": "mcq",
+    "question": "At t=0, switch S1 opens and S2 closes. The inductor had a steady-state current of 10A before the switch. What is the current through the inductor immediately after the switch at t=0⁺?",
+    "options": ["A. 0 A", "B. 5 A", "C. 10 A", "D. 20 A"],
+    "answer": "C",
+    "explanation": "Current through an inductor cannot change instantaneously — it requires infinite voltage to do so. Therefore i(0⁺) = i(0⁻) = 10 A."
+  },
+  {
+    "id": "me_ch5_q3",
+    "chapter": 5,
+    "type": "mcq",
+    "question": "A 3H inductor and a 6H inductor are connected in parallel. What is the equivalent inductance L_eq?",
+    "options": ["A. 9 H", "B. 4.5 H", "C. 3 H", "D. 2 H"],
+    "answer": "D",
+    "explanation": "Inductors in parallel combine like resistors: 1/L_eq = 1/3 + 1/6 = 2/6 + 1/6 = 3/6. So L_eq = 2 H."
+  },
+  {
+    "id": "me_ch5_q4",
+    "chapter": 5,
+    "type": "mcq",
+    "question": "An RL circuit has L_eq = 2H and R = 4Ω. The initial current is i(0⁺) = 10A. The current follows i(t) = 10e^(−2t) A. What is the current at t = 1s?",
+    "options": ["A. 5.00 A", "B. 2.71 A", "C. 1.35 A", "D. 0.68 A"],
+    "answer": "C",
+    "explanation": "i(1) = 10e^(−2×1) = 10e^(−2) = 10 × 0.1353 ≈ 1.35 A. The time constant τ = L/R = 2/4 = 0.5s, so the current decays quickly."
+  },
+  {
+    "id": "me_ch5_q5",
+    "chapter": 5,
+    "type": "short",
+    "question": "Explain why the current through an inductor cannot change instantaneously. What would physically happen if it did?",
+    "answer": "The voltage across an inductor is V = L(dI/dt). If current changed instantaneously (dt → 0 while dI ≠ 0), voltage would become infinite, which is physically impossible. In practice, an instantaneous current change would require an infinite voltage spike — this can cause arcing across switches that interrupt inductor currents.",
+    "explanation": "This property — continuity of inductor current — is used as an initial condition when solving transient circuit problems. It is the dual of capacitor voltage continuity."
+  },
+
+  {
+    "id": "me_ch6_q1",
+    "chapter": 6,
+    "type": "mcq",
+    "question": "For an ideal op-amp, which two assumptions hold?",
+    "options": [
+      "A. Infinite input resistance; zero output resistance.",
+      "B. v₊ = v₋ (virtual short); no current flows into the input terminals.",
+      "C. Gain = 1; output voltage equals input voltage.",
+      "D. Input resistance = 0; output resistance = ∞."
+    ],
+    "answer": "B",
+    "explanation": "The two ideal op-amp assumptions are: (1) virtual short — v₊ = v₋ at the input terminals; (2) no current flows into either input terminal. These follow from infinite open-loop gain and infinite input resistance."
+  },
+  {
+    "id": "me_ch6_q2",
+    "chapter": 6,
+    "type": "mcq",
+    "question": "An inverting amplifier has input resistor R1 = 1kΩ and feedback resistor R2 = 10kΩ. If the input voltage is v_in = 1V, what is the output voltage v_o?",
+    "options": ["A. +10 V", "B. −10 V", "C. +1 V", "D. −1 V"],
+    "answer": "B",
+    "explanation": "For an inverting amplifier: v_o = −(R2/R1) × v_in = −(10k/1k) × 1 = −10 V. The negative sign indicates phase inversion."
+  },
+  {
+    "id": "me_ch6_q3",
+    "chapter": 6,
+    "type": "mcq",
+    "question": "A non-inverting amplifier has R1 = 1kΩ and feedback resistor R2 = 4kΩ. If v_in = 2V, what is v_o?",
+    "options": ["A. 2 V", "B. 8 V", "C. 10 V", "D. −8 V"],
+    "answer": "C",
+    "explanation": "Non-inverting gain = 1 + R2/R1 = 1 + 4k/1k = 5. v_o = 5 × 2 = 10 V."
+  },
+  {
+    "id": "me_ch6_q4",
+    "chapter": 6,
+    "type": "mcq",
+    "question": "In an inverting op-amp circuit with R1 = 1kΩ, R2 = 1kΩ, and v_in = 1V, KCL at the inverting terminal gives i1 = i2 = 1mA. The output voltage v_o and current through a 1kΩ load R_L are:",
+    "options": [
+      "A. v_o = −1V, i_L = −1 mA",
+      "B. v_o = +1V, i_L = +1 mA",
+      "C. v_o = −1V, i_L = +1 mA",
+      "D. v_o = −2V, i_L = −2 mA"
+    ],
+    "answer": "A",
+    "explanation": "v_o = −(R2/R1) × v_in = −1V. Current through R_L: i_L = v_o/R_L = −1V/1kΩ = −1 mA (flowing into the output terminal)."
+  },
+  {
+    "id": "me_ch6_q5",
+    "chapter": 6,
+    "type": "short",
+    "question": "State the two ideal op-amp assumptions. Using these, derive the voltage gain formula for an inverting amplifier with input resistor R1 and feedback resistor R2.",
+    "answer": "Assumptions: (1) v₊ = v₋ (virtual short — no voltage difference at inputs); (2) no current flows into op-amp terminals. Since v₊ = 0 (grounded), v₋ = 0. Current through R1: i1 = (v_in − 0)/R1 = v_in/R1. By KCL at v₋ and assumption (2), i2 = i1. Voltage at output: v₋ − v_o = i2 × R2 → 0 − v_o = (v_in/R1) × R2 → Gain = v_o/v_in = −R2/R1.",
+    "explanation": "The negative sign gives the inverting behaviour. Gain magnitude = R2/R1, so you can set any gain by choosing resistor values."
+  },
+
+  {
+    "id": "me_ch7_q1",
+    "chapter": 7,
+    "type": "mcq",
+    "question": "A coil of 10 turns and area 4×10⁻² m² is placed in a uniform magnetic field of flux density B = 10⁻² T, with the field perpendicular to the coil face. What is the total flux linkage λ?",
+    "options": ["A. 4×10⁻⁵ Wb·turns", "B. 4×10⁻⁴ Wb·turns", "C. 4×10⁻³ Wb·turns", "D. 4×10⁻² Wb·turns"],
+    "answer": "C",
+    "explanation": "Flux through one turn: Φ = BA = 10⁻² × 4×10⁻² = 4×10⁻⁴ Wb. Flux linkage λ = NΦ = 10 × 4×10⁻⁴ = 4×10⁻³ Wb·turns."
+  },
+  {
+    "id": "me_ch7_q2",
+    "chapter": 7,
+    "type": "mcq",
+    "question": "The same 10-turn coil (A = 4×10⁻² m², B = 10⁻² T) is rotated so its normal makes 60° with the field. What is the new flux linkage λ?",
+    "options": ["A. 4×10⁻³ Wb·turns", "B. 3.46×10⁻³ Wb·turns", "C. 2×10⁻³ Wb·turns", "D. 0 Wb·turns"],
+    "answer": "C",
+    "explanation": "λ = NABcos(60°) = 10 × 4×10⁻² × 10⁻² × 0.5 = 4×10⁻³ × 0.5 = 2×10⁻³ Wb·turns."
+  },
+  {
+    "id": "me_ch7_q3",
+    "chapter": 7,
+    "type": "mcq",
+    "question": "The coil's flux linkage changes from 4×10⁻³ Wb·turns (perpendicular) to 2×10⁻³ Wb·turns (60° rotation). What is the change in flux linkage Δλ?",
+    "options": ["A. +2×10⁻³ Wb·turns", "B. −2×10⁻³ Wb·turns", "C. +6×10⁻³ Wb·turns", "D. −6×10⁻³ Wb·turns"],
+    "answer": "B",
+    "explanation": "Δλ = λ_final − λ_initial = 2×10⁻³ − 4×10⁻³ = −2×10⁻³ Wb·turns. The negative sign indicates decreasing flux linkage."
+  },
+  {
+    "id": "me_ch7_q4",
+    "chapter": 7,
+    "type": "mcq",
+    "question": "A charge q = 10⁻⁶ C moves with velocity u = (3î + 4ĵ) m/s in a magnetic field B = 1î T. The magnetic force F = q(u × B). What is the force vector?",
+    "options": [
+      "A. F = −4×10⁻⁶ k̂ N",
+      "B. F = +4×10⁻⁶ k̂ N",
+      "C. F = +3×10⁻⁶ k̂ N",
+      "D. F = 0 N"
+    ],
+    "answer": "A",
+    "explanation": "u × B = (3î + 4ĵ) × (1î) = 3(î×î) + 4(ĵ×î) = 0 + 4(−k̂) = −4k̂. So F = q(u × B) = 10⁻⁶ × (−4k̂) = −4×10⁻⁶ k̂ N."
+  },
+  {
+    "id": "me_ch7_q5",
+    "chapter": 7,
+    "type": "short",
+    "question": "State Faraday's Law of electromagnetic induction. Explain the significance of the negative sign (Lenz's Law).",
+    "answer": "Faraday's Law: the induced EMF in a coil equals the negative rate of change of flux linkage: EMF = −dλ/dt = −N(dΦ/dt). The negative sign (Lenz's Law) means the induced current creates a magnetic field that opposes the change in flux that caused it — a consequence of conservation of energy. If the flux increases, the induced current opposes the increase; if flux decreases, induced current tries to maintain it.",
+    "explanation": "Lenz's Law explains why inductors resist changes in current and why eddy currents oppose motion in magnetic fields."
+  },
+
+  {
+    "id": "me_ch8_q1",
+    "chapter": 8,
+    "type": "mcq",
+    "question": "A 50 hp DC motor operates from a 220V DC source with losses of 3350W under full load. What is the source current?",
+    "options": ["A. 152.0 A", "B. 169.5 A", "C. 184.8 A", "D. 200.0 A"],
+    "answer": "C",
+    "explanation": "Output power = 50 × 746 = 37,300 W. Input power = output + losses = 37,300 + 3,350 = 40,650 W. Source current = P_in / V = 40,650 / 220 ≈ 184.8 A."
+  },
+  {
+    "id": "me_ch8_q2",
+    "chapter": 8,
+    "type": "mcq",
+    "question": "For the same 50hp DC motor (P_out = 37,300W, P_in = 40,650W), what is the efficiency?",
+    "options": ["A. 85.0%", "B. 88.4%", "C. 91.8%", "D. 95.0%"],
+    "answer": "C",
+    "explanation": "η = (P_out / P_in) × 100% = (37,300 / 40,650) × 100% ≈ 91.8%."
+  },
+  {
+    "id": "me_ch8_q3",
+    "chapter": 8,
+    "type": "mcq",
+    "question": "Which type of DC motor has zero starting torque and therefore cannot start a high-inertia load from standstill?",
+    "options": ["A. Series DC motor", "B. Shunt DC motor", "C. Synchronous motor", "D. Compound DC motor"],
+    "answer": "C",
+    "explanation": "The synchronous motor has zero starting torque because the rotor must rotate at synchronous speed for torque to develop. It requires an external mechanism to bring it up to speed before it can lock into synchronism."
+  },
+  {
+    "id": "me_ch8_q4",
+    "chapter": 8,
+    "type": "mcq",
+    "question": "Which motor should NOT be operated without a mechanical load?",
+    "options": [
+      "A. Shunt DC motor",
+      "B. Series-field DC motor",
+      "C. Synchronous motor",
+      "D. Induction motor"
+    ],
+    "answer": "B",
+    "explanation": "In a series DC motor, the field current equals the armature current. Without load, current drops, the field weakens, and the motor speeds up dangerously — speed can become excessive and damage the motor."
+  },
+  {
+    "id": "me_ch8_q5",
+    "chapter": 8,
+    "type": "short",
+    "question": "Explain the concept of back-EMF in a DC motor. How does it affect motor current as the motor speeds up?",
+    "answer": "Back-EMF (E_A) is the voltage generated by the rotating armature opposing the supply voltage. From KVL: V_T = R_A × I_A + E_A, and E_A = Kφω_m. As the motor speeds up (ω_m increases), E_A increases, which reduces armature current I_A = (V_T − E_A)/R_A. At steady state, the back-EMF is large enough that the reduced current produces only the torque needed to overcome losses.",
+    "explanation": "Back-EMF provides automatic current regulation — high starting current (E_A = 0 at rest) decreases naturally as the motor accelerates, acting as a self-limiting mechanism."
+  },
+
+  {
+    "id": "me_ch9_q1",
+    "chapter": 9,
+    "type": "mcq",
+    "question": "An AC voltage is given by v(t) = 220cos(120πt + 30°) V. What is the RMS voltage V_rms?",
+    "options": ["A. 220 V", "B. 196 V", "C. 155.6 V", "D. 110 V"],
+    "answer": "C",
+    "explanation": "For a sinusoid, V_rms = V_peak / √2 = 220 / √2 ≈ 155.6 V."
+  },
+  {
+    "id": "me_ch9_q2",
+    "chapter": 9,
+    "type": "mcq",
+    "question": "Using v(t) = 220cos(120πt + 30°) applied to a 100Ω resistor, what is the average power delivered?",
+    "options": ["A. 484 W", "B. 242 W", "C. 121 W", "D. 100 W"],
+    "answer": "B",
+    "explanation": "P_avg = V_rms² / R = (155.6)² / 100 = 24,211 / 100 ≈ 242 W."
+  },
+  {
+    "id": "me_ch9_q3",
+    "chapter": 9,
+    "type": "mcq",
+    "question": "For v(t) = 220cos(120πt + 30°), what is the frequency f and period T?",
+    "options": [
+      "A. f = 120 Hz, T = 8.3 ms",
+      "B. f = 60 Hz, T = 16.7 ms",
+      "C. f = 60 Hz, T = 20 ms",
+      "D. f = 50 Hz, T = 20 ms"
+    ],
+    "answer": "B",
+    "explanation": "Angular frequency ω = 120π rad/s. Frequency f = ω/(2π) = 120π/(2π) = 60 Hz. Period T = 1/f = 1/60 ≈ 16.7 ms."
+  },
+  {
+    "id": "me_ch9_q4",
+    "chapter": 9,
+    "type": "mcq",
+    "question": "A sinusoidal current i(t) = 10cos(100πt) A flows through a 5Ω resistor. What is the average power dissipated?",
+    "options": ["A. 500 W", "B. 354 W", "C. 250 W", "D. 125 W"],
+    "answer": "C",
+    "explanation": "I_rms = 10/√2 ≈ 7.07 A. P = I_rms² × R = (7.07)² × 5 = 50 × 5 = 250 W."
+  },
+  {
+    "id": "me_ch9_q5",
+    "chapter": 9,
+    "type": "short",
+    "question": "Derive the relationship between peak voltage V_m and RMS voltage V_rms for a sinusoidal signal v(t) = V_m cos(ωt).",
+    "answer": "V_rms = √(1/T ∫₀ᵀ V_m² cos²(ωt) dt). Using cos²(z) = (1 + cos2z)/2: V_rms = √(V_m²/2T ∫₀ᵀ [1 + cos(2ωt)] dt) = √(V_m²/2) = V_m/√2. Therefore V_rms = V_m / √2 ≈ 0.707 × V_m.",
+    "explanation": "RMS (Root Mean Square) gives the equivalent DC voltage that delivers the same average power to a resistor. The factor 1/√2 comes from integrating cos² over a full cycle."
+  },
+
+  {
+    "id": "me_ch10_q1",
+    "chapter": 10,
+    "type": "mcq",
+    "question": "A 4-pole induction motor is supplied at 60 Hz. What is the synchronous speed n_s?",
+    "options": ["A. 1200 rpm", "B. 1500 rpm", "C. 1800 rpm", "D. 3600 rpm"],
+    "answer": "C",
+    "explanation": "n_s = 120f / p = 120 × 60 / 4 = 1800 rpm, where p = number of poles and f = supply frequency."
+  },
+  {
+    "id": "me_ch10_q2",
+    "chapter": 10,
+    "type": "mcq",
+    "question": "A 4-pole, 60Hz induction motor runs at 1750 rpm under full load. What is the slip s?",
+    "options": ["A. 1.39%", "B. 2.78%", "C. 5.0%", "D. 14.3%"],
+    "answer": "B",
+    "explanation": "s = (n_s − n_m) / n_s = (1800 − 1750) / 1800 = 50/1800 ≈ 0.0278 = 2.78%."
+  },
+  {
+    "id": "me_ch10_q3",
+    "chapter": 10,
+    "type": "mcq",
+    "question": "For the same motor (s = 2.78%, f = 60Hz), what is the frequency of the rotor current (slip frequency)?",
+    "options": ["A. 0.83 Hz", "B. 1.67 Hz", "C. 2.78 Hz", "D. 60 Hz"],
+    "answer": "B",
+    "explanation": "Slip frequency f_slip = s × f = 0.0278 × 60 ≈ 1.67 Hz. The rotor 'sees' the field moving past it at slip speed, inducing rotor currents at this frequency."
+  },
+  {
+    "id": "me_ch10_q4",
+    "chapter": 10,
+    "type": "mcq",
+    "question": "A 2hp load is driven by an induction motor (80% efficient) powered by a DC-to-AC converter (88% efficient) from a 400V DC source. What is the current drawn from the DC source?",
+    "options": ["A. 3.73 A", "B. 4.66 A", "C. 5.30 A", "D. 6.63 A"],
+    "answer": "C",
+    "explanation": "P_out = 2 × 746 = 1492 W. P_in,motor = 1492/0.80 = 1865 W. P_in,converter = 1865/0.88 ≈ 2119 W. I = P/V = 2119/400 ≈ 5.30 A."
+  },
+  {
+    "id": "me_ch10_q5",
+    "chapter": 10,
+    "type": "short",
+    "question": "Explain the concept of slip in a 3-phase induction motor. Why must slip be greater than zero for the motor to produce torque?",
+    "answer": "Slip s = (n_s − n_m)/n_s is the fractional difference between synchronous speed (rotating magnetic field) and rotor speed. If the rotor ran at synchronous speed (s = 0), there would be no relative motion between the rotor and the rotating field, so no EMF would be induced in the rotor, no rotor current would flow, and no torque would be produced. The rotor must slip behind the field to cut through flux lines and generate the induced current that creates torque.",
+    "explanation": "In normal operation, slip is small (1–5%). At standstill (s = 1), slip frequency equals supply frequency. At synchronous speed (s = 0), torque = 0."
+  }
+]

@@ -1,11 +1,52 @@
-// GEA1000 Study Companion
+// GEA1000 / ME2015 Study Companion
 const app = document.getElementById('app');
 
 // ── State ──────────────────────────────────────────────
-let questions = [];
-let currentTest = [];
-let userAnswers = {};
+let questions      = [];
+let currentTest    = [];
+let userAnswers    = {};
 let currentChapter = null;
+let currentModule  = null;   // 'gea1000' | 'me2015'
+
+// ── Module config ───────────────────────────────────────
+const MODULES = {
+  gea1000: {
+    name:        'GEA1000',
+    subtitle:    'Quantitative Reasoning with Data',
+    emoji:       '📊',
+    file:        'questions_gea1000.json',
+    mistakesKey: 'gea1000_mistakes',
+    fullTest:    { mcq: 10, short: 2 },
+    chapterTest: { mcq: 4,  short: 1 },
+    chapters: [
+      { num: 1, emoji: '🔬', title: 'Chapter 1', topic: 'Study Design' },
+      { num: 2, emoji: '📈', title: 'Chapter 2', topic: 'Data & Rates' },
+      { num: 3, emoji: '📉', title: 'Chapter 3', topic: 'Descriptive Stats' },
+      { num: 4, emoji: '🎲', title: 'Chapter 4', topic: 'Probability' },
+    ],
+  },
+  me2015: {
+    name:        'ME2015',
+    subtitle:    'Electrical Engineering',
+    emoji:       '⚡',
+    file:        'questions_me2015.json',
+    mistakesKey: 'me2015_mistakes',
+    fullTest:    { mcq: 10, short: 2 },
+    chapterTest: { mcq: 3,  short: 1 },
+    chapters: [
+      { num: 1,  emoji: '🔌', title: 'Chapter 1',  topic: 'Circuits I — KVL & KCL' },
+      { num: 2,  emoji: '⚡', title: 'Chapter 2',  topic: 'Circuits II — Series & Parallel' },
+      { num: 3,  emoji: '🔋', title: 'Chapter 3',  topic: 'Thevenin & Norton' },
+      { num: 4,  emoji: '📡', title: 'Chapter 4',  topic: 'Sensors' },
+      { num: 5,  emoji: '🌀', title: 'Chapter 5',  topic: 'Capacitors & Inductors' },
+      { num: 6,  emoji: '🔧', title: 'Chapter 6',  topic: 'Op-Amps' },
+      { num: 7,  emoji: '🧲', title: 'Chapter 7',  topic: 'Magnetic Fields' },
+      { num: 8,  emoji: '⚙️', title: 'Chapter 8',  topic: 'DC Motors' },
+      { num: 9,  emoji: '〰️', title: 'Chapter 9',  topic: 'AC Signals & Power' },
+      { num: 10, emoji: '🔄', title: 'Chapter 10', topic: 'AC Motors' },
+    ],
+  },
+};
 
 // ── Helpers ────────────────────────────────────────────
 function render(html) { app.innerHTML = html; }
@@ -19,23 +60,20 @@ function shuffle(arr) {
   return a;
 }
 
+function mod() { return MODULES[currentModule]; }
+
 // ── Mistake tracking (localStorage) ────────────────────
-const MISTAKES_KEY = 'gea1000_mistakes';
-
 function getMistakes() {
-  return JSON.parse(localStorage.getItem(MISTAKES_KEY) || '{}');
+  return JSON.parse(localStorage.getItem(mod().mistakesKey) || '{}');
 }
-
 function saveMistakes(mistakes) {
-  localStorage.setItem(MISTAKES_KEY, JSON.stringify(mistakes));
+  localStorage.setItem(mod().mistakesKey, JSON.stringify(mistakes));
 }
-
 function recordMistakes(wrongIds) {
   const mistakes = getMistakes();
   wrongIds.forEach(id => { mistakes[id] = (mistakes[id] || 0) + 1; });
   saveMistakes(mistakes);
 }
-
 function clearMistake(id) {
   const mistakes = getMistakes();
   if (mistakes[id]) {
@@ -45,26 +83,54 @@ function clearMistake(id) {
   saveMistakes(mistakes);
 }
 
-// ── Homepage ────────────────────────────────────────────
-const CHAPTERS = [
-  { num: 1, emoji: '📊', title: 'Chapter 1', topic: 'Study Design' },
-  { num: 2, emoji: '📈', title: 'Chapter 2', topic: 'Data & Rates' },
-  { num: 3, emoji: '📉', title: 'Chapter 3', topic: 'Descriptive Stats' },
-  { num: 4, emoji: '🎲', title: 'Chapter 4', topic: 'Probability' },
-];
+// ── Module selector (landing page) ─────────────────────
+function showModuleSelect() {
+  render(`
+    <div class="home-header">
+      <h1>Study Companion</h1>
+      <p>Select your module to begin</p>
+    </div>
 
+    <div class="module-grid">
+      ${Object.entries(MODULES).map(([key, m]) => `
+        <div class="module-card" onclick="loadModule('${key}')">
+          <div class="emoji">${m.emoji}</div>
+          <h3>${m.name}</h3>
+          <p>${m.subtitle}</p>
+        </div>
+      `).join('')}
+    </div>
+  `);
+}
+
+// ── Load a module (fetch questions then show home) ──────
+async function loadModule(moduleKey) {
+  currentModule = moduleKey;
+  const m = mod();
+  try {
+    const res = await fetch(m.file);
+    questions = await res.json();
+    showHome();
+  } catch (e) {
+    render(`<p style="color:var(--red)">Failed to load ${m.file}. Make sure the file exists.</p>`);
+  }
+}
+
+// ── Homepage ────────────────────────────────────────────
 function showHome() {
-  const mistakes = getMistakes();
+  const m = mod();
+  const mistakes     = getMistakes();
   const mistakeCount = Object.keys(mistakes).length;
 
   render(`
     <div class="home-header">
-      <h1>GEA1000 Study Companion</h1>
-      <p>Quantitative Reasoning with Data</p>
+      <button class="btn btn-secondary back-btn" onclick="showModuleSelect()">← Modules</button>
+      <h1>${m.emoji} ${m.name}</h1>
+      <p>${m.subtitle}</p>
     </div>
 
     <div class="chapter-grid">
-      ${CHAPTERS.map(ch => `
+      ${m.chapters.map(ch => `
         <div class="chapter-card" onclick="startTest(${ch.num})">
           <div class="emoji">${ch.emoji}</div>
           <h3>${ch.title}</h3>
@@ -85,16 +151,16 @@ function showHome() {
   `);
 }
 
-// ── Test builder ────────────────────────────────────────
+// ── Test builder ─────────────────────────────────────────
 function buildTest(chapter) {
-  // chapter: number 1-4 → chapter test; null → full mixed; 'retry' → mistake bank
+  const m = mod();
   let pool;
 
   if (chapter === 'retry') {
     const mistakes = getMistakes();
     pool = questions.filter(q => mistakes[q.id]);
   } else if (chapter === null) {
-    pool = questions; // all chapters
+    pool = questions;
   } else {
     pool = questions.filter(q => q.chapter === chapter);
   }
@@ -103,17 +169,15 @@ function buildTest(chapter) {
   const short = shuffle(pool.filter(q => q.type === 'short'));
 
   if (chapter === null) {
-    // Full mixed: 10 MCQ + 2 short
-    return [...mcq.slice(0, 10), ...short.slice(0, 2)];
+    return [...mcq.slice(0, m.fullTest.mcq), ...short.slice(0, m.fullTest.short)];
   } else if (chapter === 'retry') {
-    return [...mcq, ...short]; // all mistakes
+    return [...mcq, ...short];
   } else {
-    // Chapter test: up to 4 MCQ + 1 short
-    return [...mcq.slice(0, 4), ...short.slice(0, 1)];
+    return [...mcq.slice(0, m.chapterTest.mcq), ...short.slice(0, m.chapterTest.short)];
   }
 }
 
-// ── Quiz screen ──────────────────────────────────────────
+// ── Quiz screen ───────────────────────────────────────────
 function startTest(chapter) {
   currentChapter = chapter;
   currentTest    = buildTest(chapter);
@@ -130,24 +194,16 @@ function startRetry() {
 
 function recordAnswer(id, value) {
   userAnswers[id] = value;
-  // Highlight selected option visually
   document.querySelectorAll(`[data-qid="${id}"] .option-label`).forEach(el => {
     el.classList.toggle('selected', el.dataset.val === value);
   });
 }
 
 function renderQuestion(q, index) {
-  const imageHtml = q.image
-    ? `<img class="q-image" src="${q.image}" alt="diagram" />`
-    : '';
-  const svgHtml = q.svg
-    ? `<div class="q-svg">${q.svg}</div>`
-    : '';
-
   const bodyHtml = q.type === 'mcq'
     ? `<div class="options">
         ${q.options.map(opt => {
-          const letter = opt[0]; // "A", "B", etc.
+          const letter = opt[0];
           return `<label class="option-label" data-val="${letter}"
                          onclick="recordAnswer('${q.id}','${letter}')">
                     <input type="radio" name="q_${q.id}" value="${letter}" />
@@ -164,7 +220,6 @@ function renderQuestion(q, index) {
   return `
     <div class="question-block" data-qid="${q.id}">
       <div class="q-label">Q${index + 1} &middot; ${typeTag}</div>
-      ${imageHtml}${svgHtml}
       <p class="q-text">${q.question}</p>
       ${bodyHtml}
     </div>`;
@@ -191,21 +246,18 @@ function showQuiz() {
   `);
 }
 
-// ── Results screen ───────────────────────────────────────
+// ── Results screen ────────────────────────────────────────
 function submitQuiz() {
-  const mistakes = getMistakes();
   const wrongIds = [];
 
   const items = currentTest.map((q, i) => {
-    const given = (userAnswers[q.id] || '').trim();
+    const given   = (userAnswers[q.id] || '').trim();
     const isShort = q.type === 'short';
-    // For short answer: always mark for review (no auto-grade)
     const correct = isShort ? null : (given.toUpperCase() === q.answer.toUpperCase());
 
     if (!isShort && !correct) wrongIds.push(q.id);
 
-    const icon  = isShort ? '📝' : (correct ? '✅' : '❌');
-    const yourAnsText = given || '<em>No answer</em>';
+    const icon        = isShort ? '📝' : (correct ? '✅' : '❌');
     const correctLine = isShort
       ? `<div class="result-correct-ans">Model answer: ${q.answer}</div>`
       : (correct
@@ -226,7 +278,6 @@ function submitQuiz() {
       </div>`;
   });
 
-  // Record new mistakes and clear ones that were answered correctly
   recordMistakes(wrongIds);
   currentTest.forEach(q => {
     if (q.type === 'mcq') {
@@ -235,8 +286,8 @@ function submitQuiz() {
     }
   });
 
-  const mcqCount    = currentTest.filter(q => q.type === 'mcq').length;
-  const mcqCorrect  = currentTest.filter(q =>
+  const mcqCount   = currentTest.filter(q => q.type === 'mcq').length;
+  const mcqCorrect = currentTest.filter(q =>
     q.type === 'mcq' &&
     (userAnswers[q.id] || '').trim().toUpperCase() === q.answer.toUpperCase()
   ).length;
@@ -258,15 +309,9 @@ function submitQuiz() {
 }
 
 function toggleResultItem(header) {
-  const body = header.nextElementSibling;
-  body.classList.toggle('open');
+  header.nextElementSibling.classList.toggle('open');
 }
 
-// ── Boot ────────────────────────────────────────────────
-async function boot() {
-  const res = await fetch('questions.json');
-  questions = await res.json();
-  showHome();
-}
-
+// ── Boot ──────────────────────────────────────────────────
+function boot() { showModuleSelect(); }
 boot();

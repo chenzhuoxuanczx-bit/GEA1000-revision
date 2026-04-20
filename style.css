@@ -47,13 +47,45 @@ p  { line-height: 1.6; }
 .btn-danger { background: #7f1d1d; color: var(--red); border: 1px solid var(--red); }
 .btn-danger:hover { background: #991b1b; }
 
+/* === Module selector === */
+.module-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-bottom: 24px;
+}
+.module-card {
+  background: var(--surface);
+  border: 1px solid var(--surface2);
+  border-radius: var(--radius);
+  padding: 32px 20px;
+  text-align: center;
+  cursor: pointer;
+  transition: border-color 0.15s, background 0.15s;
+}
+.module-card:hover {
+  border-color: var(--accent);
+  background: #1e2f4a;
+}
+.module-card .emoji { font-size: 2.8rem; margin-bottom: 12px; }
+.module-card h3 { font-size: 1.1rem; color: var(--accent); margin-bottom: 6px; }
+.module-card p  { font-size: 0.8rem; color: var(--text-muted); }
+
 /* === Homepage === */
 .home-header {
   text-align: center;
   margin-bottom: 32px;
+  position: relative;
 }
 .home-header h1 { margin-bottom: 6px; }
 .home-header p { font-size: 0.95rem; }
+.back-btn {
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: 0.8rem;
+  padding: 6px 12px;
+}
 
 .chapter-grid {
   display: grid;

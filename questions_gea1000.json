@@ -1,0 +1,258 @@
+[
+  {
+    "id": "ch1_q1",
+    "chapter": 1,
+    "type": "mcq",
+    "question": "Drug X is a new drug intended to be taken as a tablet by people who have skin allergy reactions. Researchers designed a study with a treatment group (Drug X) and a control group. What are the possible tablets to give to the control group subjects, assuming all tablets look and taste the same? Select all that apply.\n\n(A) An empty tablet.\n(B) A tablet containing glucose. It is a definite known fact that glucose has a 2% better success rate than an empty tablet.\n(C) A tablet containing salt, with an unknown success rate.",
+    "options": [
+      "A. Only (A)",
+      "B. Only (A) and (B)",
+      "C. Only (B) and (C)",
+      "D. All of (A), (B), and (C)"
+    ],
+    "answer": "B",
+    "explanation": "Only (A) and (B) are correct. A control group acts as a baseline for comparison with the treatment group. It can receive no treatment, a placebo, or an existing treatment with a known effect. (C) is incorrect because a tablet with an unknown success rate cannot provide a meaningful baseline for comparison."
+  },
+  {
+    "id": "ch1_q2",
+    "chapter": 1,
+    "type": "mcq",
+    "question": "Which of the following statements is/are always true about controlled experiments and observational studies?\n\n(I) There is no control group in observational studies.\n(II) Randomised assignment of subjects does not occur in observational studies.\n(III) There are no confounders in controlled experiments.",
+    "options": [
+      "A. Only (I) and (II)",
+      "B. Only (I) and (III)",
+      "C. Only (II) and (III)",
+      "D. Only (II)"
+    ],
+    "answer": "D",
+    "explanation": "Observational studies generally do have control groups. Subjects self-assign to groups in observational studies, so random assignment is impossible — making (II) always true. Confounders can still exist in controlled experiments if subjects are not randomly assigned. Hence only (II) is always true."
+  },
+  {
+    "id": "ch1_q3",
+    "chapter": 1,
+    "type": "mcq",
+    "question": "In a large-scale experiment, a researcher randomly assigned 6000 subjects to receive either a drug or a placebo. 4000 received the drug, 2000 received the placebo. A head count found 3002 males in the drug group. Which is the most reasonable number of males expected in the placebo group?",
+    "options": [
+      "A. 1000",
+      "B. 1500",
+      "C. 2000",
+      "D. 2998"
+    ],
+    "answer": "B",
+    "explanation": "Randomised assignment of a large number of subjects produces groups similar in all aspects. About 75% (3002/4000) of the drug group were male, so we expect roughly 75% of the 2000 placebo subjects — about 1500 — to also be male."
+  },
+  {
+    "id": "ch1_q4",
+    "chapter": 1,
+    "type": "mcq",
+    "question": "Alex wants to investigate the effect of listening to music on time taken to solve a maths problem. Which of the following scenarios is an example of random assignment?\n\n(I) Subjects are assigned based on arrival time — first 50% to treatment, last 50% to control.\n(II) For each subject, Alex asks them to choose heads or tails, then tosses a fair coin. A match assigns them to treatment; no match to control.",
+    "options": [
+      "A. Only (I)",
+      "B. Only (II)",
+      "C. Both (I) and (II)",
+      "D. Neither (I) nor (II)"
+    ],
+    "answer": "B",
+    "explanation": "Assignment by arrival time is not random — harder-working subjects may arrive earlier, introducing bias. In scenario (II), the probability of each assignment can be computed exactly (50/50), making it a valid random mechanism."
+  },
+  {
+    "id": "ch1_q5",
+    "chapter": 1,
+    "type": "short",
+    "question": "Explain the difference between a confounder and a lurking variable. Give one example of each in the context of a study on whether coffee consumption causes heart disease.",
+    "answer": "A confounder is a variable associated with both the explanatory variable (coffee consumption) and the response variable (heart disease) that can distort the apparent relationship — e.g., smoking (smokers tend to drink more coffee and have higher heart disease risk). A lurking variable is a variable not measured in the study that influences the relationship — e.g., stress levels, which affect both coffee consumption and heart health.",
+    "explanation": "Confounders are measured variables that can be controlled for; lurking variables are unmeasured. Both can produce spurious associations in observational studies."
+  },
+  {
+    "id": "ch2_q1",
+    "chapter": 2,
+    "type": "mcq",
+    "question": "A population census shows household sizes across ethnic groups. The proportion of households with 6 or more persons is 7.9% for the lowest subgroup and 15.6% for the highest subgroup. What can we say about the overall proportion of households with 6 or more persons?",
+    "options": [
+      "A. It must be exactly the average of 7.9% and 15.6%",
+      "B. It must be greater than 7.9% and smaller than 15.6%",
+      "C. It must be greater than 15.6%",
+      "D. It must be smaller than 7.9%"
+    ],
+    "answer": "B",
+    "explanation": "By the basic rule of rates, the overall rate always lies strictly between the lowest and highest subgroup rates. It cannot be lower than 7.9% (the minimum subgroup rate) or higher than 15.6% (the maximum subgroup rate)."
+  },
+  {
+    "id": "ch2_q2",
+    "chapter": 2,
+    "type": "mcq",
+    "question": "A table shows monthly household income from work in Singapore in 2010 and 2020. In 2020, the proportions earning below $6,999 total 46.5%, making the proportion earning above $6,999 equal to 53.5%. In 2010, proportions earning below $6,999 total 59.5%, making the proportion earning above $6,999 equal to 40.5%. Which statements are correct?\n\n(A) A majority of resident households earn more than $6,999 in 2020.\n(B) A larger proportion earn more than $6,999 in 2020 than in 2010.\n(C) rate(Income > $6,999 | 2020) > rate(Income > $6,999 | 2010).\n(D) rate(Income > $6,999 | 2020) < rate(Income > $6,999 | 2010).",
+    "options": [
+      "A. Only (A) and (B)",
+      "B. Only (A), (B) and (C)",
+      "C. Only (C) and (D)",
+      "D. All of the above"
+    ],
+    "answer": "B",
+    "explanation": "53.5% > 50%, so a majority earn above $6,999 in 2020 — (A) is correct. 53.5% > 40.5%, so the proportion is larger in 2020 — (B) and (C) are correct. (D) contradicts (C) and is false."
+  },
+  {
+    "id": "ch2_q3",
+    "chapter": 2,
+    "type": "mcq",
+    "question": "A researcher's table is partially obscured. The known values are: Female row: X=300, Y=100; Male row: X=50, Y=?; Column totals: X=500. What is the proportion of males in the study?",
+    "options": [
+      "A. 0.10",
+      "B. 0.15",
+      "C. 0.20",
+      "D. 0.25"
+    ],
+    "answer": "C",
+    "explanation": "Column X total = 500, Female X = 300, so Male X = 200. But Male X is given as 50. Reconstructing: Female total = 400, Column total = 500, so Male total = 100. Proportion of males = 100/500 = 0.20."
+  },
+  {
+    "id": "ch2_q4",
+    "chapter": 2,
+    "type": "mcq",
+    "question": "1000 cancer patients were randomly divided into two groups. New medication group (480 patients): 320 in remission, 160 not. Placebo group (520 patients): 280 in remission, 240 not. Was the new medication positively associated with cancer remission?",
+    "options": [
+      "A. Yes, because the proportion in remission is higher in the medication group than the placebo group",
+      "B. Yes, because more patients are in remission than not in both groups",
+      "C. No, because there are patients who had remission in the placebo group",
+      "D. No, because the two groups are not of the same size"
+    ],
+    "answer": "A",
+    "explanation": "Medication remission rate = 320/480 = 66.7%. Placebo remission rate = 280/520 = 53.8%. Since 66.7% > 53.8%, remission is positively associated with the medication. Group sizes and placebo remissions are irrelevant to the direction of association."
+  },
+  {
+    "id": "ch2_q5",
+    "chapter": 2,
+    "type": "short",
+    "question": "Explain Simpson's Paradox in your own words. Give a concrete example where a trend seen in subgroups disappears or reverses when the groups are combined.",
+    "answer": "Simpson's Paradox occurs when a trend that appears in several subgroups of data disappears or reverses when the subgroups are combined. Example: Drug A has a higher survival rate than Drug B in both mild-condition patients and severe-condition patients separately, but when the data is pooled, Drug B appears to have a higher overall survival rate — because Drug B was given to more mild-condition patients (who have higher survival rates regardless of drug).",
+    "explanation": "The paradox arises because a lurking variable (condition severity) affects both the treatment assignment and the outcome, distorting the overall comparison."
+  },
+  {
+    "id": "ch3_q1",
+    "chapter": 3,
+    "type": "mcq",
+    "question": "Consider a set of 50 data points with a single outlier. If the outlier is removed, which of the following is/are ALWAYS true?\n\n(A) The removal will cause the mean to decrease.\n(B) The removal will cause the interquartile range to decrease.\n(C) The removal will cause the standard deviation to decrease.\n(D) The removal will cause the range to change.",
+    "options": [
+      "A. Only (A) and (B)",
+      "B. Only (C) and (D)",
+      "C. Only (A), (C) and (D)",
+      "D. Only (B) and (D)"
+    ],
+    "answer": "B",
+    "explanation": "The mean can increase or decrease depending on whether the outlier is above or below the bulk. The IQR can increase, decrease, or stay the same. The standard deviation always decreases when an outlier is removed (it is always the most extreme point from the mean). The range always changes because the outlier is the max or min."
+  },
+  {
+    "id": "ch3_q2",
+    "chapter": 3,
+    "type": "mcq",
+    "question": "There are 76 pairs of siblings. The older sibling is always heavier than the younger sibling. A scatter plot uses the younger sibling's weight (x-axis) to predict the older sibling's weight (y-axis). Which statements must be true?\n\n(I) There is a positive association between the older and younger siblings' weights.\n(II) All the points lie above the line y = x in the scatter plot.",
+    "options": [
+      "A. Only (I)",
+      "B. Only (II)",
+      "C. Neither (I) nor (II)",
+      "D. Both (I) and (II)"
+    ],
+    "answer": "B",
+    "explanation": "Since every older sibling is heavier, for each point (x, y) we have y > x, so all points lie above the line y = x. However, this does not guarantee positive association — the older sibling weights could still decrease as younger sibling weights increase (negative association), as long as each older sibling remains heavier than their younger sibling."
+  },
+  {
+    "id": "ch3_q3",
+    "chapter": 3,
+    "type": "mcq",
+    "question": "10 data points: 3, 50, r, 8, 20, 1, 32, 58, 10, 138. Q1 = 8, Q3 = 58. If 138 is the ONLY outlier, what is the maximum possible value of r?",
+    "options": [
+      "A. 58",
+      "B. 100",
+      "C. 133",
+      "D. 137"
+    ],
+    "answer": "C",
+    "explanation": "IQR = Q3 - Q1 = 58 - 8 = 50. A value is an outlier if it exceeds Q3 + 1.5 × IQR = 58 + 75 = 133. For 138 to be the only outlier, r must be at most 133. Any value of r ≥ 134 would also be an outlier."
+  },
+  {
+    "id": "ch3_q4",
+    "chapter": 3,
+    "type": "mcq",
+    "question": "A boxplot shows GEA1000 midterm results for 50 students. The minimum is 50, Q1 is 68, median is 75, Q3 is 82, and there is one point at 100. Which of the following can be derived from the boxplot?\n\n(A) There is at least one outlier.\n(B) The range is 40.\n(C) The interquartile range is 40.\n(D) The standard deviation is 14.",
+    "options": [
+      "A. Only (A)",
+      "B. Only (A) and (B)",
+      "C. Only (B) and (C)",
+      "D. Only (C) and (D)"
+    ],
+    "answer": "A",
+    "explanation": "The point at 100 is shown as an outlier on the boxplot — (A) is correct. The range is max minus min = 100 - 50 = 50, not 40 — (B) is false. IQR = Q3 - Q1 = 82 - 68 = 14, not 40 — (C) is false. Standard deviation cannot be derived from a boxplot — (D) is false."
+  },
+  {
+    "id": "ch3_q5",
+    "chapter": 3,
+    "type": "short",
+    "question": "A company has 10 employees earning $3,000/month each and one CEO earning $500,000/month. Which measure of centre (mean or median) better represents a 'typical' employee's salary, and why?",
+    "answer": "The median better represents a typical employee's salary. The CEO's salary is a high outlier that pulls the mean far above what any regular employee earns. The median, being the middle value, is resistant to outliers and gives $3,000 — which accurately reflects what a typical employee earns.",
+    "explanation": "The mean is sensitive to outliers; the median is robust. When data is strongly skewed or has extreme values, median is the preferred measure of centre."
+  },
+  {
+    "id": "ch4_q1",
+    "chapter": 4,
+    "type": "mcq",
+    "question": "A glass machine produces: Grade A (good) 90% of the time, Grade B (minor defects) 2%, Grade C (unacceptable) 8%. An inspection machine discards all Grade C glass with certainty and never discards Grade A or B. If a piece of glass is NOT discarded, what is the probability it is Grade A? (to 3 significant figures)",
+    "options": [
+      "A. 0.900",
+      "B. 0.920",
+      "C. 0.978",
+      "D. There is not enough information"
+    ],
+    "answer": "C",
+    "explanation": "P(Grade A | Not Grade C) = P(Grade A) / P(Grade A or B) = 0.90 / (0.90 + 0.02) = 0.90 / 0.92 ≈ 0.978. Since Grade C glass is always discarded and Grade A/B are never discarded, 'not discarded' is equivalent to 'Grade A or B'."
+  },
+  {
+    "id": "ch4_q2",
+    "chapter": 4,
+    "type": "mcq",
+    "question": "Let E and F be two events in a sample space. Which statements are ALWAYS true?\n\n(I) If P(E) + P(F) > 1, then E and F are not mutually exclusive.\n(II) If E and F are mutually exclusive, then P(E) = P(F) = 0.5.",
+    "options": [
+      "A. Only (I)",
+      "B. Only (II)",
+      "C. Both (I) and (II)",
+      "D. Neither (I) nor (II)"
+    ],
+    "answer": "A",
+    "explanation": "If E and F are mutually exclusive, P(E ∪ F) = P(E) + P(F). But probabilities cannot exceed 1, so if P(E) + P(F) > 1, they must share outcomes — i.e., they cannot be mutually exclusive. (I) is always true. (II) is false: mutually exclusive events can have any probabilities summing to ≤ 1, e.g. P(E) = 0.3 and P(F) = 0.4."
+  },
+  {
+    "id": "ch4_q3",
+    "chapter": 4,
+    "type": "mcq",
+    "question": "Events A and B are independent with P(A) = 0.4 and P(B) = 0.3. What is P(A or B)?",
+    "options": [
+      "A. 0.12",
+      "B. 0.58",
+      "C. 0.70",
+      "D. 0.70 - 0.12 = 0.58"
+    ],
+    "answer": "B",
+    "explanation": "P(A or B) = P(A) + P(B) - P(A and B). Since A and B are independent, P(A and B) = P(A) × P(B) = 0.4 × 0.3 = 0.12. So P(A or B) = 0.4 + 0.3 - 0.12 = 0.58."
+  },
+  {
+    "id": "ch4_q4",
+    "chapter": 4,
+    "type": "mcq",
+    "question": "A bag contains 3 red balls and 2 blue balls. Two balls are drawn without replacement. What is the probability that both balls are red?",
+    "options": [
+      "A. 9/25",
+      "B. 3/10",
+      "C. 2/5",
+      "D. 1/2"
+    ],
+    "answer": "B",
+    "explanation": "P(both red) = P(1st red) × P(2nd red | 1st red) = (3/5) × (2/4) = 6/20 = 3/10."
+  },
+  {
+    "id": "ch4_q5",
+    "chapter": 4,
+    "type": "short",
+    "question": "Explain the difference between mutually exclusive events and independent events. Can two events be both mutually exclusive AND independent? Justify your answer.",
+    "answer": "Mutually exclusive events cannot both occur at the same time — P(A and B) = 0. Independent events do not influence each other's probability — P(A and B) = P(A) × P(B). Two events can only be both mutually exclusive and independent if at least one of them has probability 0, because: if P(A and B) = 0 (mutually exclusive) and P(A and B) = P(A)×P(B) (independent), then P(A)×P(B) = 0, meaning P(A) = 0 or P(B) = 0. In practice, non-trivial events cannot be both.",
+    "explanation": "This is a common misconception — students often confuse the two concepts. Mutually exclusive events are actually negatively dependent (if one occurs, the other definitely cannot)."
+  }
+]
